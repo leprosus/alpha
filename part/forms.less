@@ -1,0 +1,316 @@
+@import "config";
+@import "mixins";
+
+// Styles for form elements
+
+// Base form styles
+form {
+  fieldset {
+    margin: (@bottom-spacing * 2) 0;
+  }
+
+  legend {
+    font-size: @h3;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0 (@bottom-spacing * 2) 0;
+  }
+
+  .row {
+    margin: 0 0 @bottom-spacing 0;
+
+    > label,
+    .label {
+      float: left;
+      padding: @form-text-vertical-spacing 0 0 0;
+      text-align: right;
+      width: @form-label-width;
+    }
+
+    .input {
+      margin: 0 0 0 (@form-label-width + @grid-gutter-width);
+
+      + .input {
+        margin-top: (@bottom-spacing / 2)
+      }
+
+      .help {
+        color: @form-help-color;
+        font-size: @form-help-text-size;
+        margin: 0;
+        padding-top: 3px;
+      }
+
+      .comment,
+      .inline {
+        margin-left: 5px;
+      }
+
+      .comment {
+        display: inline-block;
+        padding: @form-text-vertical-spacing 0 0 0;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .actions {
+    .border-radius(0 0 @border-radius @border-radius);
+    background: @form-action-background;
+    margin: 0;
+    padding: @bottom-spacing @bottom-spacing @bottom-spacing (@form-label-width + @grid-gutter-width);
+  }
+
+  &.horizontal {
+    .row > label,
+    .label {
+      display: block;
+      float: none;
+      padding: 0 0 @form-text-vertical-spacing;
+      text-align: left;
+      width: auto;
+    }
+
+    .input {
+      margin: 0;
+    }
+
+    .actions {
+      padding: @bottom-spacing;
+    }
+  }
+}
+
+// Inputs & buttons
+select,
+textarea,
+input[type="text"],
+input[type="password"] {
+  .box-sizing;
+  border: @form-input-border-color 1px solid;
+  height: 28px;
+  padding: @form-input-vertical-spacing 6px;
+}
+
+.button,
+select,
+input[type="text"],
+input[type="password"],
+textarea {
+  #font > .base();
+  .border-radius;
+  color: @text;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+textarea {
+  height: auto;
+  overflow: auto;
+  padding-right: @form-input-vertical-spacing;
+  resize: vertical;
+}
+
+.button,
+label,
+select,
+button {
+  cursor: pointer;
+}
+
+.button {
+  color: @text;
+  overflow: visible;
+  padding: @form-input-vertical-spacing 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  z-index: 0;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: @text;
+  }
+
+  &:active {
+    padding-bottom: @form-input-vertical-spacing - 1;
+    padding-top: @form-input-vertical-spacing + 1;
+  }
+}
+
+select {
+  appearance: none;
+}
+
+option {
+  background: @white;
+  padding: @form-input-vertical-spacing;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"] {
+  background: @white;
+}
+
+textarea,
+input[type="text"],
+input[type="password"] {
+  .box-shadow(inset 1px 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+
+.lt-ie8 {
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"] {
+    height: auto;
+  }
+}
+
+// Buttons group
+.buttons {
+  .button {
+    .border-radius(0);
+    margin: 0 0 0 -1px;
+  }
+
+  .button:first-child {
+    .border-radius(@border-radius 0 0 @border-radius);
+  }
+
+  .button:last-child {
+    .border-radius(0 @border-radius @border-radius 0);
+  }
+}
+
+// Buttons backgrounds
+.button {
+  .button-background(@button-background-start, @button-background-end);
+  .box-shadow(inset 0 1px 0 0 rgba(255, 255, 255, .5));
+  border: 1px solid;
+  border-color: transparent rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+
+  .warning,
+  .success,
+  .default {
+    color: @white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .warning:link,
+  .warning:visited,
+  .warning:hover,
+  .warning:active,
+
+  .success:link,
+  .success:visited,
+  .success:hover,
+  .success:active,
+
+  .default:link,
+  .default:visited,
+  .default:hover,
+  .default:active {
+    color: @white;
+  }
+
+  .default {
+    .button-background(@button-info-background-start, @button-info-background-end);
+  }
+
+  .success {
+    .button-background(@button-success-background-start, @button-success-background-end);
+  }
+
+  .warning {
+    .button-background(@button-warning-background-start, @button-warning-background-end);
+  }
+}
+
+// Checkbox and Radio
+.radio,
+.check {
+  display: inline-block;
+  padding: @form-input-vertical-spacing 0 0 0;
+}
+
+.radio input,
+.check input {
+  margin: 2px;
+}
+
+// Focus & Active state
+.button {
+  &:focus,
+  &:active {
+    .box-shadow(inset 1px 2px 2px rgba(0, 0, 0, 0.1));
+    z-index: 1;
+  }
+}
+
+.button:active,
+.button:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #268bd2;
+  outline: none;
+}
+
+.button:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  .box-shadow(0 0 5px rgba(38, 139, 210, .3));
+}
+
+// Disabled state
+.button.disabled,
+.button[disabled],
+textarea[disabled],
+select[disabled],
+input[disabled] {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+// Valid, invalid state
+.valid {
+  .check,
+  .radio,
+  .comment {
+    color: @green;
+  }
+
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"] {
+    border-color: @green;
+  }
+}
+
+.invalid {
+  .check,
+  .radio,
+  .comment {
+    color: @red;
+  }
+
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"] {
+    border-color: @red;
+  }
+}

@@ -1,0 +1,23 @@
+@import "config";
+@import "mixins";
+
+// Block with image
+.thumb {
+  .clearfix;
+  margin: 0 0 @bottom-spacing 0;
+
+  .pic {
+    float: left;
+    margin-right: @bottom-spacing;
+  }
+
+  .text {
+    overflow: auto;
+  }
+
+  &.right .pic {
+    float: right;
+    margin-left: @bottom-spacing;
+    margin-right: 0;
+  }
+}

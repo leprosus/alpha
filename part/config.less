@@ -1,0 +1,106 @@
+// Base
+@background: #fff;
+@text: #444;
+
+// Links
+@link: #268bd2;
+@link-hover: darken(@link, 10);
+@link-visited: darken(@link, 20);
+
+// Colors
+@orange: #cb4b16;
+@yellow-light: #fdf6e3;
+@red: #dc322f;
+@green: #859900;
+@blue: #268bd2;
+
+@white: #fff;
+@gray-light: #eee;
+@gray-lighter: #ccc;
+@gray: #888;
+@gray-darker: #666;
+@gray-dark: #333;
+@black: #000;
+
+@header-color: @gray-dark;
+@source-background: @yellow-light;
+@source-background-inversed: #073642;
+
+// Font Stacks
+@font-sans-serif: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+@font-monospace: Consolas, 'Lucida Console', Monaco, monospace;
+
+#font {
+  .base(@weight: normal, @size: @font-size, @line_height: @line-height) {
+    font: @weight @size ~"/" @line_height @font-family;
+  }
+
+  .monospace(@weight: normal, @size: @font-size, @line_height: @line-height) {
+    font: @weight @size ~"/" @line_height @font-monospace;
+  }
+}
+
+// Base fonts
+@font-family: @font-sans-serif;
+@font-size: 13px;
+@line-height: 18px;
+
+// Text size
+@h1: 26px;
+@h2: @h1 - 4;
+@h3: @h2 - 4;
+@h4: @h3 - 4;
+@h5: @h4 - 2;
+
+// Other
+@border-radius: 3px;
+@bottom-spacing: @line-height - 6;
+
+// Grid
+@grid-columns: 12;
+@grid-column-width: 60px;
+@grid-gutter-width: 20px;
+@site-width: (@grid-columns * @grid-column-width) + (@grid-gutter-width * (@grid-columns - 1));
+
+// Navigation
+@nav-z-index: 2010;
+@nav-height: 28px;
+@nav-background: @white;
+@nav-border-color: darken(@white, 15%);
+@nav-hover-color: @black;
+@nav-hover-border-color: @gray-light;
+@nav-hover-background: @gray-light;
+@nav-active-color: @black;
+@nav-active-border-color: @gray-lighter;
+@nav-active-background: @white;
+@nav-bar-height: 36px;
+@nav-bar-text-color: @gray-lighter;
+@nav-bar-text-color-shadow: @black;
+@nav-bar-text-color-active: @white;
+@nav-bar-text-color-shadow-active: @black;
+@nav-bar-title-text-size: @h2;
+@nav-bar-background: @gray-dark;
+
+// Tables
+@table-header-background: lighten(@gray-light, 2%);
+@table-hover-background: @yellow-light;
+@table-border-color: @gray-light;
+
+// Forms
+@form-label-width: 200px;
+@form-help-text-size: 12px;
+@form-help-color: @gray;
+@form-text-vertical-spacing: 5px;
+@form-action-background: lighten(@gray-light, 2%);
+@form-input-border-color: darken(@gray-lighter, 5%) @gray-lighter lighten(@gray-lighter, 5%);
+@form-input-vertical-spacing: 3px;
+
+// Buttons
+@button-background-start: @white;
+@button-background-end: lighten(@gray-lighter, 5%);
+@button-info-background-start: lighten(@blue, 20%);
+@button-info-background-end: @blue;
+@button-success-background-start: lighten(@green, 10%);
+@button-success-background-end: @green;
+@button-warning-background-start: lighten(@red, 20%);
+@button-warning-background-end: @red;

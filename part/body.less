@@ -1,0 +1,24 @@
+@import "config";
+
+// Base body & links styles
+body {
+  #font > .base();
+  background: @background;
+  color: @text;
+}
+
+a {
+  color: @link;
+
+  &:visited {
+    color: @link-visited;
+  }
+
+  &:hover {
+    color: @link-hover;
+  }
+
+  &:active {
+    outline: none;
+  }
+}

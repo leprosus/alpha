@@ -1,0 +1,35 @@
+@import "config";
+
+// Breadcrumbs
+.breadcrumbs {
+  margin: 0 0 @bottom-spacing;
+  overflow: hidden;
+  padding: 0;
+
+  li {
+    float: left;
+    list-style: none;
+    margin-left: @line-height/2;
+
+    &:before {
+      content: '/';
+      margin-right: @line-height/2;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:first-child:before {
+      display: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

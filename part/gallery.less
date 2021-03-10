@@ -1,0 +1,31 @@
+@import "config";
+
+// Gallery
+.gallery {
+  margin: 0;
+
+  .item {
+    margin-bottom: @grid-gutter-width;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  img {
+    .border-radius;
+    background: @white;
+    border: 1px solid @gray-light;
+    display: block;
+    padding: 4px;
+  }
+
+  small {
+    display: block;
+    padding: 0 5px;
+  }
+}
