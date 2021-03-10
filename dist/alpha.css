@@ -127,11 +127,11 @@ section {
 .row:first-child {
   margin-top: 0;
 }
-.row > [class^='g-'] {
+.row > [class^='cell-'] {
   float: left;
   margin: 0 0 0 20px;
 }
-.row > [class^='g-']:first-child {
+.row > [class^='cell-']:first-child {
   margin-left: 0;
 }
 .cell-1 {
