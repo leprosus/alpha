@@ -73,7 +73,7 @@
 </section>
 <section id="use" class="row">
     <div class="cell-12">
-        <h2>Как подключить</h2>
+        <h2>How to connect</h2>
         <pre class="prettyprint linenums">&lt;!doctype html&gt;
 	&lt;head&gt;
 		...
@@ -84,14 +84,16 @@
 </section>
 <section id="grid" class="row">
     <div class="cell-12">
-        <h2>Макет страницы</h2>
-        <p>Макет (layout) сайта создается с помощью портированного и оптимизированного кода из <a href="http://960.gs/">960
-            Grid System</a>. 12 колонок, основной блок шириной <code>60px</code>, расстояние между колонками и рядами
+        <h2>Layout</h2>
+        <p>A layout website is been creating by porting and optimizing the code from <a href="http://960.gs/">960 Grid
+            System</a>. 12 columns, width of the main block is <code>60px</code>, distance of between columns and rows
+            is
             <code>20px</code>.</p>
-        <h3>Основа</h3>
-        <p>Основой разметки служит родительский блок с классом <code>class="grid"</code>. В нём следует расположить
-            контейнер с классом <code>class="row"</code>, который разделяет разметку на ряды.</p>
-        <p>Контейнеры с классами <code>class="cell-x"</code> позволяют создавать различные конфигурации колонок в рядах.
+        <h3>Base</h3>
+        <p>Base of layout is node with the class <code>class="grid"</code>. inside of the node you should locate a
+            container with the class <code>class="row"</code>, witch divides the layout by rows.</p>
+        <p>Containers with the classes <code>class="cell-x"</code> allow you create different combination of columns and
+            rows.
         </p>
         <pre class="prettyprint linenums">&lt;div class=&quot;grid&quot;&gt;
 	&lt;div class=&quot;row&quot;&gt;
@@ -103,7 +105,7 @@
 		&lt;/div&gt;&lt;!-- cell-7 --&gt;
 	&lt;/div&gt;&lt;!-- row --&gt;
 &lt;/div&gt;&lt;!-- grid --&gt;</pre>
-        <h4>Демонстрация 12-колоночной разметки</h4>
+        <h4>12-columns layout demo</h4>
         <div class="f-demo">
             <div class="row grid-demo">
                 <div class="cell-1">
@@ -250,35 +252,35 @@
                 </div>
             </div>
         </div>
-        <h3>Вложенные колонки</h3>
-        <p>Для создания более сложных разметок вы можете вкладывать контейнеры <code class="prettyprint">&lt;div class=&quot;row&quot;&gt;...&lt;/div&gt;</code>
-            друг в друга:</p>
+        <h3>Nested columns</h3>
+        <p>To create more complex layouts you can embed containers <code class="prettyprint">&lt;div class=&quot;row&quot;&gt;...&lt;/div&gt;</code>:
+        </p>
         <pre class="prettyprint linenums">&lt;div class=&quot;grid&quot;&gt;
-	&lt;div class=&quot;row&quot;&gt;				&lt;!-- 1 уровень --&gt;
+	&lt;div class=&quot;row&quot;&gt;				&lt;!-- 1 level --&gt;
 		&lt;div class=&quot;cell-6&quot;&gt;
-			&lt;div class=&quot;row&quot;&gt;			&lt;!-- 2 уровень --&gt;
+			&lt;div class=&quot;row&quot;&gt;			&lt;!-- 2 level --&gt;
 				&lt;div class=&quot;cell-1&quot;&gt;...&lt;/div&gt;
 				&lt;div class=&quot;cell-4&quot;&gt;...&lt;/div&gt;
 				&lt;div class=&quot;cell-1&quot;&gt;...&lt;/div&gt;
 			&lt;/div&gt;&lt;!-- row --&gt;
-			&lt;div class=&quot;row&quot;&gt;			&lt;!-- 2 уровень --&gt;
+			&lt;div class=&quot;row&quot;&gt;			&lt;!-- 2 level --&gt;
 				&lt;div class=&quot;cell-2&quot;&gt;...&lt;/div&gt;
 				&lt;div class=&quot;cell-2&quot;&gt;...&lt;/div&gt;
 				&lt;div class=&quot;cell-2&quot;&gt;...&lt;/div&gt;
 			&lt;/div&gt;&lt;!-- row --&gt;
 		&lt;/div&gt;&lt;!-- cell-6 --&gt;
 		&lt;div class=&quot;cell-6&quot;&gt;
-			&lt;div class=&quot;row&quot;&gt;			&lt;!-- 2 уровень --&gt;
+			&lt;div class=&quot;row&quot;&gt;			&lt;!-- 2 level --&gt;
 				&lt;div class=&quot;cell-6&quot;&gt;...&lt;/div&gt;
 			&lt;/div&gt;&lt;!-- row --&gt;
-			&lt;div class=&quot;row&quot;&gt;			&lt;!-- 2 уровень --&gt;
+			&lt;div class=&quot;row&quot;&gt;			&lt;!-- 2 level --&gt;
 				&lt;div class=&quot;cell-3&quot;&gt;...&lt;/div&gt;
 				&lt;div class=&quot;cell-3&quot;&gt;...&lt;/div&gt;
 			&lt;/div&gt;&lt;!-- row --&gt;
 		&lt;/div&gt;&lt;!-- cell-6 --&gt;
 	&lt;/div&gt;&lt;!-- row --&gt;
 &lt;/div&gt;&lt;!-- grid --&gt;</pre>
-        <h4>Пример вложенных колонок</h4>
+        <h4>Example of nested columns</h4>
         <div class="f-demo">
             <div class="row grid-demo">
                 <div class="cell-6">
@@ -324,10 +326,192 @@
         </div>
     </div>
 </section>
-
+<section id="navigation" class="row">
+    <div class="cell-12">
+        <h2>Navigation</h2>
+        <h3>Horizontal navigation</h3>
+        <p>To implement the simplest horizontal navigation you need to use list with the class <code
+                class="prettyprint">&lt;ul
+            class="nav"&gt;...&lt;/ul&gt;</code>:</p>
+        <pre class="prettyprint linenums">&lt;ul class=&quot;nav&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;First option&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Second is active&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Third option&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last option&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;!-- nav --&gt;</pre>
+        <p>Active navigation option is selected by the class <code>.active</code>.</p>
+        <p>As a result we get the following navigation menu:</p>
+        <ul class="nav">
+            <li><a href="#">First option</a></li>
+            <li class="active"><a href="#">Second is active</a></li>
+            <li><a href="#">Third option</a></li>
+            <li><a href="#">Last option</a></li>
+        </ul>
+        <h4>Horizontal tabs</h4>
+        <p>There is additional class <code>.nav-tabs</code>, witch changes the horizontal navigation menu design:</p>
+        <pre class="prettyprint linenums">&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+	...
+&lt;/ul&gt;&lt;!-- nav-tabs --&gt;</pre>
+        <ul class="nav nav-tabs">
+            <li><a href="#">First option</a></li>
+            <li class="active"><a href="#">Second is active</a></li>
+            <li><a href="#">Third option</a></li>
+            <li><a href="#">Last option</a></li>
+        </ul>
+        <h3>Vertical navigation</h3>
+        <p>To create vertical navigation you need to use list with the class <code>.nav-list</code>:</p>
+        <div class="row">
+            <div class="cell-9">
+<pre class="prettyprint linenums">&lt;ul class="nav-list"&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;First option&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Second is active&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Third option&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last option&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;!-- nav-list --&gt;</pre>
+            </div>
+            <div class="cell-3">
+                <ul class="nav-list">
+                    <li><a href="#">First option</a></li>
+                    <li class="active"><a href="#">Second is active</a></li>
+                    <li><a href="#">Third option</a></li>
+                    <li><a href="#">Last option</a></li>
+                </ul>
+            </div>
+        </div>
+        <h4>Vertical tabs</h4>
+        <div class="row">
+            <div class="cell-9">
+                <p>To create vertical tabs you need to append additional class <code>.nav-tabs</code>:
+                </p>
+                <pre class="prettyprint linenums">&lt;ul class="nav-list nav-tabs"&gt;
+	...
+&lt;/ul&gt;&lt;!-- nav-tabs --&gt;</pre>
+            </div>
+            <div class="cell-3">
+                <ul class="nav-list nav-tabs">
+                    <li><a href="#">First option</a></li>
+                    <li class="active"><a href="#">Second is active</a></li>
+                    <li><a href="#">Third option</a></li>
+                    <li><a href="#">Last option</a></li>
+                </ul>
+            </div>
+        </div>
+        <h3>Navigation panel</h3>
+        <p>The panel contains two base elements, <code>.nav-bar</code> and nested <code>.body</code>. Inside of the
+            panel you can locate a logo (<code>.title</code>) and navigation (<code>.nav</code>):</p>
+        <pre class="prettyprint linenums">&lt;div class="nav-bar"&gt;
+	&lt;div class="body"&gt;
+		&lt;div class="title"&gt;
+			&lt;a href="#"&gt;alpha&lt;/a&gt;
+		&lt;/div&gt;&lt;!-- title --&gt;
+		&lt;ul class="nav"&gt;
+			&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;&lt;!-- nav --&gt;
+	&lt;/div&gt;&lt;!-- body --&gt;
+&lt;/div&gt;&lt;!-- nav-bar --&gt;</pre>
+        <div class="nav-bar">
+            <div class="body">
+                <div class="title">
+                    <a href="#">alpha</a>
+                </div>
+                <ul class="nav">
+                    <li><a href="#grid">Layout</a></li>
+                    <li class="active"><a href="#navigation">Navigation</a></li>
+                    <li><a href="#typography">Typography</a></li>
+                    <li><a href="#images">Thumbnails</a></li>
+                    <li><a href="#columns">Columns</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                </ul>
+            </div>
+        </div>
+        <h4>Fixed navigation panel</h4>
+        <p>If you wont you can fix the panel at the top adding the class <code>.fixed</code>:</p>
+        <pre class="prettyprint linenums">&lt;div class="nav-bar fixed"&gt;
+	...
+&lt;/div&gt;&lt;!-- fixed --&gt;</pre>
+        <h3>Bread crumbs</h3>
+        <p>Bread crumbs can be created by using general list with the class <code class="prettyprint">&lt;ul
+            class="breadcrumbs"&gt;...&lt;/ul&gt;</code>:</p>
+        <pre class="prettyprint linenums">&lt;ul class="breadcrumbs"&gt;
+	&lt;li&gt;&lt;a href="#"&gt;Main&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;Category&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;Nested category&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="cur"&gt;Product&lt;/li&gt;
+&lt;/ul&gt;&lt;!-- f-breadcrumb --&gt;</pre>
+        <h4>Bread crumbs example</h4>
+        <ul class="breadcrumbs">
+            <li><a href="#">Main</a></li>
+            <li><a href="#">Category</a></li>
+            <li><a href="#">Nested category</a></li>
+            <li class="cur">Product</li>
+        </ul>
+        <h3>Page-by-page navigation</h3>
+        <p>The class <code class="prettyprint">&lt;div class="pager"&gt;...&lt;/div&gt;</code> is usage as base for
+            page-by-page navigation. Inside of the container are located links.</p>
+        <p>&laquo;Next&raquo; and &laquo;Previous&raquo; links are separated by the classes <code>.pager.prev</code>
+            and <code>.pager.next</code>. The active element is the class <code>.active</code>.</p>
+        <pre class="prettyprint linenums">&lt;div class="pager"&gt;
+	&lt;ul&gt;
+		&lt;li class="pager prev"&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="active"&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="pager next"&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;&lt;!-- pager --&gt;</pre>
+        <p>Page-by-page navigation is centered by default:</p>
+        <div class="pager">
+            <ul>
+                <li class="pager prev"><a href="#">Prev</a></li>
+                <li><a href="#">1</a></li>
+                <li><strong class="active">2</strong></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li>...</li>
+                <li><a href="#">20</a></li>
+                <li><a href="#">21</a></li>
+                <li><a href="#">22</a></li>
+                <li><a href="#">23</a></li>
+                <li class="pager next"><a href="#">Next</a></li>
+            </ul>
+        </div>
+        <p>You can change to left alignment by adding the class <code>.pager.left</code>:</p>
+        <div class="pager left">
+            <ul>
+                <li class="pager prev"><a href="#">&larr; Назад</a></li>
+                <li><a href="#">1</a></li>
+                <li><strong class="active">2</strong></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li>...</li>
+                <li><a href="#">20</a></li>
+                <li><a href="#">21</a></li>
+                <li><a href="#">22</a></li>
+                <li><a href="#">23</a></li>
+                <li class="pager next"><a href="#">Вперёд &rarr;</a></li>
+            </ul>
+        </div>
+        <p>Or right alignment by <code>.pager.right</code>:</p>
+        <div class="pager right">
+            <ul>
+                <li class="pager prev"><a href="#">Prev</a></li>
+                <li><a href="#">1</a></li>
+                <li><strong class="active">2</strong></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li>...</li>
+                <li><a href="#">20</a></li>
+                <li><a href="#">21</a></li>
+                <li><a href="#">22</a></li>
+                <li><a href="#">23</a></li>
+                <li class="pager next"><a href="#">Next</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
 <style>
     body {
-        margin-top: 45px !important;
+        margin-top: 60px !important;
     }
 
     .linenums li {
