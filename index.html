@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Alpha CSS framework documentation</title>
     <link href="dist/alpha.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body class="grid">
 <div class="nav-bar fixed">
@@ -68,10 +71,291 @@
         </div>
     </div>
 </section>
+<section id="use" class="row">
+    <div class="cell-12">
+        <h2>Как подключить</h2>
+        <pre class="prettyprint linenums">&lt;!doctype html&gt;
+	&lt;head&gt;
+		...
+		&lt;link href="/css/<a href="https://raw.github.com/leprosus/alpha/master/dist/alpha.min.css">alpha.css</a>" rel="stylesheet"&gt;
+		...
+	&lt;/head&gt;</pre>
+    </div>
+</section>
+<section id="grid" class="row">
+    <div class="cell-12">
+        <h2>Макет страницы</h2>
+        <p>Макет (layout) сайта создается с помощью портированного и оптимизированного кода из <a href="http://960.gs/">960
+            Grid System</a>. 12 колонок, основной блок шириной <code>60px</code>, расстояние между колонками и рядами
+            <code>20px</code>.</p>
+        <h3>Основа</h3>
+        <p>Основой разметки служит родительский блок с классом <code>class="grid"</code>. В нём следует расположить
+            контейнер с классом <code>class="row"</code>, который разделяет разметку на ряды.</p>
+        <p>Контейнеры с классами <code>class="cell-x"</code> позволяют создавать различные конфигурации колонок в рядах.
+        </p>
+        <pre class="prettyprint linenums">&lt;div class=&quot;grid&quot;&gt;
+	&lt;div class=&quot;row&quot;&gt;
+		&lt;div class=&quot;cell-5&quot;&gt;
+			...
+		&lt;/div&gt;&lt;!-- cell-5 --&gt;
+		&lt;div class=&quot;cell-7&quot;&gt;
+			...
+		&lt;/div&gt;&lt;!-- cell-7 --&gt;
+	&lt;/div&gt;&lt;!-- row --&gt;
+&lt;/div&gt;&lt;!-- grid --&gt;</pre>
+        <h4>Демонстрация 12-колоночной разметки</h4>
+        <div class="f-demo">
+            <div class="row grid-demo">
+                <div class="cell-1">
+                    <code>cell-1</code>
+                </div>
+                <div class="cell-1">
+                    <code>cell-1</code>
+                </div>
+                <div class="cell-1">
+                    <code>cell-1</code>
+                </div>
+                <div class="cell-1">
+                    <code>cell-1</code>
+                </div>
+                <div class="cell-1">
+                    <code>cell-1</code>
+                </div>
+                <div class="cell-1">
+                    <code>cell-1</code>
+                </div>
+                <div class="cell-1">
+                    <code>cell-1</code>
+                </div>
+                <div class="cell-1">
+                    <code>cell-1</code>
+                </div>
+                <div class="cell-1">
+                    <code>cell-1</code>
+                </div>
+                <div class="cell-1">
+                    <code>cell-1</code>
+                </div>
+                <div class="cell-1">
+                    <code>cell-1</code>
+                </div>
+                <div class="cell-1">
+                    <code>cell-1</code>
+                </div>
+            </div>
+            <div class="row grid-demo">
+                <div class="cell-2">
+                    <code>cell-2 - 140px</code>
+                </div>
+                <div class="cell-2">
+                    <code>cell-2</code>
+                </div>
+                <div class="cell-2">
+                    <code>cell-2</code>
+                </div>
+                <div class="cell-2">
+                    <code>cell-2</code>
+                </div>
+                <div class="cell-2">
+                    <code>cell-2</code>
+                </div>
+                <div class="cell-2">
+                    <code>cell-2</code>
+                </div>
+            </div>
+            <div class="row grid-demo">
+                <div class="cell-3">
+                    <code>cell-3 - 220px</code>
+                </div>
+                <div class="cell-3">
+                    <code>cell-3</code>
+                </div>
+                <div class="cell-3">
+                    <code>cell-3</code>
+                </div>
+                <div class="cell-3">
+                    <code>cell-3</code>
+                </div>
+            </div>
+            <div class="row grid-demo">
+                <div class="cell-4">
+                    <code>cell-4 - 300px</code>
+                </div>
+                <div class="cell-4">
+                    <code>cell-4</code>
+                </div>
+                <div class="cell-4">
+                    <code>cell-4</code>
+                </div>
+            </div>
+            <div class="row grid-demo">
+                <div class="cell-5">
+                    <code>cell-5 - 380px</code>
+                </div>
+                <div class="cell-7">
+                    <code>cell-7</code>
+                </div>
+            </div>
+            <div class="row grid-demo">
+                <div class="cell-6">
+                    <code>cell-6 - 460px</code>
+                </div>
+                <div class="cell-6">
+                    <code>cell-6</code>
+                </div>
+            </div>
+            <div class="row grid-demo">
+                <div class="cell-7">
+                    <code>cell-7 - 540px</code>
+                </div>
+                <div class="cell-5">
+                    <code>cell-5</code>
+                </div>
+            </div>
+            <div class="row grid-demo">
+                <div class="cell-8">
+                    <code>cell-8 - 620px</code>
+                </div>
+                <div class="cell-4">
+                    <code>cell-4</code>
+                </div>
+            </div>
+            <div class="row grid-demo">
+                <div class="cell-9">
+                    <code>cell-9 - 700px</code>
+                </div>
+                <div class="cell-3">
+                    <code>cell-3</code>
+                </div>
+            </div>
+            <div class="row grid-demo">
+                <div class="cell-10">
+                    <code>cell-10 - 780px</code>
+                </div>
+                <div class="cell-2">
+                    <code>cell-2</code>
+                </div>
+            </div>
+            <div class="row grid-demo">
+                <div class="cell-11">
+                    <code>cell-11 - 860px</code>
+                </div>
+                <div class="cell-1">
+                    <code>cell-1</code>
+                </div>
+            </div>
+            <div class="row grid-demo">
+                <div class="cell-12">
+                    <code>cell-12 - 940px</code>
+                </div>
+            </div>
+        </div>
+        <h3>Вложенные колонки</h3>
+        <p>Для создания более сложных разметок вы можете вкладывать контейнеры <code class="prettyprint">&lt;div class=&quot;row&quot;&gt;...&lt;/div&gt;</code>
+            друг в друга:</p>
+        <pre class="prettyprint linenums">&lt;div class=&quot;grid&quot;&gt;
+	&lt;div class=&quot;row&quot;&gt;				&lt;!-- 1 уровень --&gt;
+		&lt;div class=&quot;cell-6&quot;&gt;
+			&lt;div class=&quot;row&quot;&gt;			&lt;!-- 2 уровень --&gt;
+				&lt;div class=&quot;cell-1&quot;&gt;...&lt;/div&gt;
+				&lt;div class=&quot;cell-4&quot;&gt;...&lt;/div&gt;
+				&lt;div class=&quot;cell-1&quot;&gt;...&lt;/div&gt;
+			&lt;/div&gt;&lt;!-- row --&gt;
+			&lt;div class=&quot;row&quot;&gt;			&lt;!-- 2 уровень --&gt;
+				&lt;div class=&quot;cell-2&quot;&gt;...&lt;/div&gt;
+				&lt;div class=&quot;cell-2&quot;&gt;...&lt;/div&gt;
+				&lt;div class=&quot;cell-2&quot;&gt;...&lt;/div&gt;
+			&lt;/div&gt;&lt;!-- row --&gt;
+		&lt;/div&gt;&lt;!-- cell-6 --&gt;
+		&lt;div class=&quot;cell-6&quot;&gt;
+			&lt;div class=&quot;row&quot;&gt;			&lt;!-- 2 уровень --&gt;
+				&lt;div class=&quot;cell-6&quot;&gt;...&lt;/div&gt;
+			&lt;/div&gt;&lt;!-- row --&gt;
+			&lt;div class=&quot;row&quot;&gt;			&lt;!-- 2 уровень --&gt;
+				&lt;div class=&quot;cell-3&quot;&gt;...&lt;/div&gt;
+				&lt;div class=&quot;cell-3&quot;&gt;...&lt;/div&gt;
+			&lt;/div&gt;&lt;!-- row --&gt;
+		&lt;/div&gt;&lt;!-- cell-6 --&gt;
+	&lt;/div&gt;&lt;!-- row --&gt;
+&lt;/div&gt;&lt;!-- grid --&gt;</pre>
+        <h4>Пример вложенных колонок</h4>
+        <div class="f-demo">
+            <div class="row grid-demo">
+                <div class="cell-6">
+                    <div class="row grid-demo">
+                        <div class="cell-1">
+                            <code>cell-1</code>
+                        </div>
+                        <div class="cell-4">
+                            <code>cell-4</code>
+                        </div>
+                        <div class="cell-1">
+                            <code>cell-1</code>
+                        </div>
+                    </div>
+                    <div class="row grid-demo">
+                        <div class="cell-2">
+                            <code>cell-2</code>
+                        </div>
+                        <div class="cell-2">
+                            <code>cell-2</code>
+                        </div>
+                        <div class="cell-2">
+                            <code>cell-2</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell-6">
+                    <div class="row grid-demo">
+                        <div class="cell-6">
+                            <code>cell-6</code>
+                        </div>
+                    </div>
+                    <div class="row grid-demo">
+                        <div class="cell-3">
+                            <code>cell-3</code>
+                        </div>
+                        <div class="cell-3">
+                            <code>cell-3</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <style>
     body {
-        margin-top: 45px;
+        margin-top: 45px !important;
+    }
+
+    .linenums li {
+        list-style-type: decimal;
+    }
+
+    .grid-demo > [class ^= "cell-"] {
+        text-align: center;
+        background: #eee;
+        line-height: 27px;
+        border-radius: 3px;
+    }
+
+    .grid-demo code {
+        border: none;
+        background: none;
+    }
+
+    .grid-demo .grid-demo > [class ^= "cell-"] {
+        background: #e2e2e2;
     }
 </style>
+<script>
+    prettyPrint();
+    $('#nav').onePageNav({
+        currentClass: 'active',
+        changeHash: true
+    });
+</script>
 </body>
 </html>

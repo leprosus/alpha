@@ -10,10 +10,9 @@
 
 .row {
   .clearfix;
-  margin: @grid-gutter-width 0 0;
 
-  &:first-child {
-    margin-top: 0;
+  & + .row {
+    margin: @grid-gutter-width 0 0;
   }
 
   > [class ^= 'cell-'] {

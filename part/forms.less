@@ -17,7 +17,9 @@ form {
   }
 
   .row {
-    margin: 0 0 @bottom-spacing 0;
+    & + .row {
+      margin: @bottom-spacing 0 0 0;
+    }
 
     > label,
     .label {
@@ -87,7 +89,8 @@ textarea,
 input[type="text"],
 input[type="password"] {
   .box-sizing;
-  border: @form-input-border-color 1px solid;
+  border: 1px solid;
+  border-color: @form-input-border-color;
   height: 28px;
   padding: @form-input-vertical-spacing 6px;
 }
@@ -200,39 +203,37 @@ input::-moz-focus-inner {
   border: 1px solid;
   border-color: transparent rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 
-  .warning,
-  .success,
-  .default {
+  &.warning,
+  &.success,
+  &.default {
     color: @white;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   }
 
-  .warning:link,
-  .warning:visited,
-  .warning:hover,
-  .warning:active,
-
-  .success:link,
-  .success:visited,
-  .success:hover,
-  .success:active,
-
-  .default:link,
-  .default:visited,
-  .default:hover,
-  .default:active {
+  &.warning:link,
+  &.warning:visited,
+  &.warning:hover,
+  &.warning:active,
+  &.success:link,
+  &.success:visited,
+  &.success:hover,
+  &.success:active,
+  &.default:link,
+  &.default:visited,
+  &.default:hover,
+  &.default:active {
     color: @white;
   }
 
-  .default {
+  &.default {
     .button-background(@button-info-background-start, @button-info-background-end);
   }
 
-  .success {
+  &.success {
     .button-background(@button-success-background-start, @button-success-background-end);
   }
 
-  .warning {
+  &.warning {
     .button-background(@button-warning-background-start, @button-warning-background-end);
   }
 }

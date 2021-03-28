@@ -99,6 +99,9 @@ section {
 .clearfix:after {
   clear: both;
 }
+.push-right {
+  float: right;
+}
 .grid {
   zoom: 1;
   margin: 0 auto;
@@ -114,7 +117,6 @@ section {
 }
 .row {
   zoom: 1;
-  margin: 20px 0 0;
 }
 .row:before,
 .row:after {
@@ -124,8 +126,8 @@ section {
 .row:after {
   clear: both;
 }
-.row:first-child {
-  margin-top: 0;
+.row + .row {
+  margin: 20px 0 0;
 }
 .row > [class^='cell-'] {
   float: left;
@@ -179,34 +181,34 @@ section {
   padding-left: 0;
   padding-right: 10px;
 }
-.col-2,
-.col-3,
-.col-4 {
+.column-2,
+.column-3,
+.column-4 {
   zoom: 1;
 }
-.col-2:before,
-.col-3:before,
-.col-4:before,
-.col-2:after,
-.col-3:after,
-.col-4:after {
+.column-2:before,
+.column-3:before,
+.column-4:before,
+.column-2:after,
+.column-3:after,
+.column-4:after {
   display: table;
   content: '';
 }
-.col-2:after,
-.col-3:after,
-.col-4:after {
+.column-2:after,
+.column-3:after,
+.column-4:after {
   clear: both;
 }
-.col-4 .column,
-.col-3 .column .column,
-.col-2 .column {
+.column-4 .column,
+.column-3 .column .column,
+.column-2 .column {
   width: 50%;
 }
-.col-3 > .column:first-child {
+.column-3 > .column:first-child {
   width: 67%;
 }
-.col-3 > .column {
+.column-3 > .column {
   width: 33%;
 }
 body {
@@ -458,7 +460,6 @@ td,
 tfoot th {
   border-top: 1px solid #eee;
 }
-tr:hover th,
 tr:hover td {
   background: #fdf6e3;
 }
@@ -474,8 +475,8 @@ form legend {
   margin: 0;
   padding: 0 0 24px 0;
 }
-form .row {
-  margin: 0 0 12px 0;
+form .row + .row {
+  margin: 12px 0 0 0;
 }
 form .row > label,
 form .row .label {
@@ -530,7 +531,8 @@ textarea,
 input[type="text"],
 input[type="password"] {
   box-sizing: border-box;
-  border: #bfbfbf #ccc #d9d9d9 1px solid;
+  border: 1px solid;
+  border-color: #bfbfbf #ccc #d9d9d9;
   height: 28px;
   padding: 3px 6px;
 }
@@ -626,47 +628,47 @@ input::-moz-focus-inner {
   background-color: #cccccc;
   background-image: linear-gradient(#f2f2f2, #cccccc);
 }
-.button .warning,
-.button .success,
-.button .default {
+.button.warning,
+.button.success,
+.button.default {
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
-.button .warning:link,
-.button .warning:visited,
-.button .warning:hover,
-.button .warning:active,
-.button .success:link,
-.button .success:visited,
-.button .success:hover,
-.button .success:active,
-.button .default:link,
-.button .default:visited,
-.button .default:hover,
-.button .default:active {
+.button.warning:link,
+.button.warning:visited,
+.button.warning:hover,
+.button.warning:active,
+.button.success:link,
+.button.success:visited,
+.button.success:hover,
+.button.success:active,
+.button.default:link,
+.button.default:visited,
+.button.default:hover,
+.button.default:active {
   color: #fff;
 }
-.button .default {
+.button.default {
   background-color: #268bd2;
   background-image: linear-gradient(#78b9e6, #268bd2);
 }
-.button .default:hover {
+.button.default:hover {
   background-color: #227dbc;
   background-image: linear-gradient(#62ade3, #227dbc);
 }
-.button .success {
+.button.success {
   background-color: #859900;
   background-image: linear-gradient(#b1cc00, #859900);
 }
-.button .success:hover {
+.button.success:hover {
   background-color: #6f8000;
   background-image: linear-gradient(#9bb300, #6f8000);
 }
-.button .warning {
+.button.warning {
   background-color: #dc322f;
   background-image: linear-gradient(#eb8886, #dc322f);
 }
-.button .warning:hover {
+.button.warning:hover {
   background-color: #cf2623;
   background-image: linear-gradient(#e77370, #cf2623);
 }
