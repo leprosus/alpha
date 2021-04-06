@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Alpha CSS framework documentation</title>
+    <title>ALPHA CSS framework documentation</title>
     <link href="dist/alpha.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
@@ -12,7 +12,7 @@
 <div class="nav-bar fixed">
     <div class="body">
         <div class="title">
-            <a href="http://leprosus.github.com/alpha/">Alpha Framework</a>
+            <a href="http://leprosus.github.com/alpha/">ALPHA Framework</a>
         </div>
         <ul class="nav" id="nav">
             <li><a href="#use">Use</a></li>
@@ -478,7 +478,7 @@
         <p>You can change to left alignment by adding the class <code>.pager.left</code>:</p>
         <div class="pager left">
             <ul>
-                <li class="pager prev"><a href="#">&larr; Назад</a></li>
+                <li class="pager prev"><a href="#">Prev</a></li>
                 <li><a href="#">1</a></li>
                 <li><strong class="active">2</strong></li>
                 <li><a href="#">3</a></li>
@@ -488,7 +488,7 @@
                 <li><a href="#">21</a></li>
                 <li><a href="#">22</a></li>
                 <li><a href="#">23</a></li>
-                <li class="pager next"><a href="#">Вперёд &rarr;</a></li>
+                <li class="pager next"><a href="#">Next</a></li>
             </ul>
         </div>
         <p>Or right alignment by <code>.pager.right</code>:</p>
@@ -509,9 +509,349 @@
         </div>
     </div>
 </section>
+<section id="typography" class="row">
+    <div class="cell-12">
+        <h2>Typography</h2>
+        <h3>Headers and paragraphs</h3>
+        <p>For headings and paragraphs is set font sizes and bottom offset by default.</p>
+        <hr>
+        <h1>First-level headers (H1)</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</p>
+        <h2>Second-level headers (H2)</h2>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+            explicabo.</p>
+        <h3>Third-level headers (H3)</h3>
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+            dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <h4>Fourth-level headers (H4)</h4>
+        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+            numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        <hr>
+        <h3>Tables</h3>
+        <p>The below you can see an explanation of tables decoration using default table layout:</p>
+        <pre class="prettyprint linenums">&lt;table&gt;
+	&lt;caption&gt;...&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;...&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;th&gt;...&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;...&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</pre>
+        <table>
+            <caption>List of browsers</caption>
+            <thead>
+            <tr>
+                <th>&#8470;</th>
+                <th>Browser name (tag th)</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <th colspan="2">Table footer (tag tfoot)</th>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Chrome</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Firefox</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Safari</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Opera</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Internet Explorer</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>You can additional decorate every odd row with the class <code class="prettyprint">&lt;table class="zebra"&gt;...&lt;/table&gt;</code>.
+        </p>
+        <table class="zebra">
+            <thead>
+            <tr>
+                <th>&#8470;</th>
+                <th>Browser name (tag th)</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <th colspan="2">Table footer (tag tfoot)</th>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Chrome</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Firefox</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Safari</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Opera</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Internet Explorer</td>
+            </tr>
+            </tbody>
+        </table>
+        <h3>Regular, numbered lists, and definition lists</h3>
+        <div class="row">
+            <div class="cell-4">
+                <p>General list <code>&lt;ul&gt;</code>:</p>
+                <ul>
+                    <li>First element</li>
+                    <li>Second element</li>
+                    <li>Third element</li>
+                    <li>Last element</li>
+                </ul>
+            </div>
+            <div class="cell-4">
+                <p>Numbered list <code>&lt;ol&gt;</code>:</p>
+                <ol>
+                    <li>First element</li>
+                    <li>Second element</li>
+                    <li>Third element</li>
+                    <li>Last element</li>
+                </ol>
+            </div>
+            <div class="cell-4">
+                <p>List of definitions <code>&lt;dl&gt;</code>:</p>
+                <dl>
+                    <dt>First term <code>&lt;dt&gt;</code></dt>
+                    <dd>Definition for first term <code>&lt;dd&gt;</code></dd>
+                    <dt>Second term</dt>
+                    <dd>Definition for second term</dd>
+                </dl>
+            </div>
+        </div>
+        <h3>Tags to decorate content</h3>
+        <h4>To decorate text:</h4>
+        <table>
+            <tr>
+                <th>An element</th>
+                <th>Usage example</th>
+            </tr>
+            <tr>
+                <td><code>&lt;a href="#"&gt;...&lt;/a&gt;</code></td>
+                <td><a href="#">link</a></td>
+            </tr>
+            <tr>
+                <td><code>&lt;i&gt;</code> and <code>&lt;em&gt;</code></td>
+                <td><i>italic</i> and <em>accented</em> text</td>
+            </tr>
+            <tr>
+                <td><code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code></td>
+                <td><b>bold</b> and <strong>accented</strong> text</td>
+            </tr>
+            <tr>
+                <td><code>&lt;mark&gt;</code></td>
+                <td>
+                    <mark>marked</mark>
+                    text
+                </td>
+            </tr>
+            <tr>
+                <td><code> &lt;small&gt;</code></td>
+                <td><small>small</small> text</td>
+            </tr>
+            <tr>
+                <td><code>&lt;abbr title="..."&gt;...&lt;/abbr&gt;</code></td>
+                <td><abbr title="Shoulder of Pork and hAM">SPAM</abbr></td>
+            </tr>
+            <tr>
+                <td><code>&lt;cite&gt;</code> and <code>&lt;q&gt;</code></td>
+                <td><cite>citation</cite> and <q>quote text</q></td>
+            </tr>
+            <tr>
+                <td><code>&lt;code&gt;</code> and <code>&lt;dfn&gt;</code></td>
+                <td><code>source code</code> and <dfn>new term</dfn></td>
+            </tr>
+            <tr>
+                <td><code>&lt;kbd&gt;</code></td>
+                <td>«hot» key <kbd>&lt;Ctrl&gt;+&lt;S&gt;</kbd></td>
+            </tr>
+            <tr>
+                <td><code>&lt;var&gt;</code> and <code>&lt;samp&gt;</code></td>
+                <td>variable name <var>variableName</var> and <samp>terminal text</samp></td>
+            </tr>
+            <tr>
+                <td><code>&lt;ins&gt;</code> and <code>&lt;del&gt;</code></td>
+                <td>
+                    <ins>added text</ins>
+                    and
+                    <del>removed text</del>
+                </td>
+            </tr>
+            <tr>
+                <td><code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code></td>
+                <td><sub>low</sub> index and <sup>up</sup> index text</td>
+            </tr>
+        </table>
+        <h3>To decorate blocks</h3>
+        <p><code>&lt;blockquote&gt;</code> is for long citation:</p>
+        <blockquote>
+            <p><strong>A citation</strong> — A citation is a reference to a source. More precisely, a citation is an
+                abbreviated alphanumeric expression embedded in the body of an intellectual work that denotes an entry
+                in the bibliographic references section of the work for the purpose of acknowledging the relevance of
+                the works of others to the topic of discussion at the spot where the citation appears.</p>
+            <p><cite>https://en.wikipedia.org/wiki/Citation</cite></p>
+        </blockquote>
+        <p><code>&lt;hr&gt;</code> tag example:</p>
+        <hr>
+        <address><code>&lt;address&gt;</code> Earth planet, Some Country, Any city, Line str. 5</address>
+        <pre>Formatted text example; tag &lt;pre&gt;...&lt;/pre&gt;</pre>
+    </div>
+</section>
+<section id="images" class="row">
+    <div class="cell-12">
+        <h2>Thumbnails</h2>
+        <h3>Pictures and text</h3>
+        <p>Class <code>.thumb</code> is using for blocks with text and picture. Use class <code>.pic</code> for
+            pictures.
+            Text is located into a container with class <code>.text</code>.</p>
+        <pre class="prettyprint linenums">&lt;div class="thumb"&gt;
+	&lt;img class="pic" src="..." alt="..." /&gt;
+	&lt;div class="text"&gt;
+		...
+	&lt;/div&gt;&lt;!-- text --&gt;
+&lt;/div&gt;&lt;!-- thumb --&gt;</pre>
+        <div class="thumb">
+            <img class="pic" src="https://via.placeholder.com/200x100/FD020B/FFFFFF/?text=200%20x%20100" width="200"
+                 height="100" alt=""/>
+            <div class="text">
+                <h3>Plasma pulsar: highlights</h3>
+                <p>The gamma-ray quantum is translucent for hard radiation. The front stretches the exothermic quasar as
+                    the signal propagates in an environment with an inverse population.</p>
+            </div>
+        </div>
+        <p>To align the image to the right, you need to additionally assign class <code>.right</code> to the block.
+        </p>
+        <pre class="prettyprint linenums">&lt;div class="thumb right"&gt;
+	...
+&lt;/div&gt;&lt;!-- thumb --&gt;</pre>
+        <div class="thumb right">
+            <img class="pic" src="https://via.placeholder.com/200x100/FD020B/FFFFFF/?text=200%20x%20100" width="200"
+                 height="100" alt=""/>
+            <div class="text">
+                <h3>Plasma pulsar: highlights</h3>
+                <p>The gamma-ray quantum is translucent for hard radiation. The front stretches the exothermic quasar as
+                    the signal propagates in an environment with an inverse population.</p>
+            </div>
+        </div>
+        <h3>Gallery</h3>
+        <p>To render pictures set there is class <code>.gallery</code> for the container with the set and
+            <code>.item</code> for an gallary element which is used with layout classes:</p>
+        <pre class="prettyprint linenums">&lt;div class="row gallery"&gt;
+	...
+	&lt;div class="cell-2 item"&gt;
+		&lt;a href="#"&gt;&lt;img src="https://via.placeholder.com/130x80/FD020B/FFFFFF/?text=130%20x%2080" width="140" height="80" alt="pic" /&gt;
+ 		&lt;small&gt;Picture title&lt;/small&gt;&lt;/a&gt;
+	&lt;/div&gt;&lt;!-- item --&gt;
+	...
+&lt;/div&gt;&lt;!-- gallery --&gt;</pre>
+        <div class="row gallery">
+            <div class="cell-2 item">
+                <a href="#"><img src="https://via.placeholder.com/130x80/FD020B/FFFFFF/?text=130%20x%2080" width="130"
+                                 height="80" alt="pic"/>
+                    <small>Picture title</small></a>
+            </div>
+            <div class="cell-2 item">
+                <a href="#"><img src="https://via.placeholder.com/130x80/FD020B/FFFFFF/?text=130%20x%2080" width="130"
+                                 height="80" alt="pic"/>
+                    <small>Picture title</small></a>
+            </div>
+            <div class="cell-2 item">
+                <a href="#"><img src="https://via.placeholder.com/130x80/FD020B/FFFFFF/?text=130%20x%2080" width="130"
+                                 height="80" alt="pic"/>
+                    <small>Picture title</small></a>
+            </div>
+            <div class="cell-2 item">
+                <a href="#"><img src="https://via.placeholder.com/130x80/FD020B/FFFFFF/?text=130%20x%2080" width="130"
+                                 height="80" alt="pic"/>
+                    <small>Picture title</small></a>
+            </div>
+            <div class="cell-2 item">
+                <a href="#"><img src="https://via.placeholder.com/130x80/FD020B/FFFFFF/?text=130%20x%2080" width="130"
+                                 height="80" alt="pic"/>
+                    <small>Picture title</small></a>
+            </div>
+            <div class="cell-2 item">
+                <a href="#"><img src="https://via.placeholder.com/130x80/FD020B/FFFFFF/?text=130%20x%2080" width="130"
+                                 height="80" alt="pic"/>
+                    <small>Picture title</small></a>
+            </div>
+        </div>
+        <p>The elements are combined with known layout classes <code>.row, .cell-1, .cell-2, .cell-3</code> etc.</p>
+        <div class="row gallery">
+            <div class="cell-5 item">
+                <a href="#"><img src="https://via.placeholder.com/370x208/FD020B/FFFFFF/?text=370%20x%20208"
+                                 width="370" height="208" alt="pic"/>
+                    <small>Picture title</small></a>
+            </div>
+            <div class="cell-4 item">
+                <a href="#"><img src="https://via.placeholder.com/290x80/FD020B/FFFFFF/?text=290%20x%2080"
+                                 width="290" height="80" alt="pic"/>
+                    <small>Picture title</small></a>
+            </div>
+            <div class="cell-3 item">
+                <a href="#"><img src="https://via.placeholder.com/210x80/FD020B/FFFFFF/?text=210%20x%2080"
+                                 width="210" height="80" alt="pic"/>
+                    <small>Picture title</small></a>
+            </div>
+            <div class="cell-2 item">
+                <a href="#"><img src="https://via.placeholder.com/130x80/FD020B/FFFFFF/?text=130%20x%2080"
+                                 width="130" height="80" alt="pic"/>
+                    <small>Picture title</small></a>
+            </div>
+            <div class="cell-2 item">
+                <a href="#"><img src="https://via.placeholder.com/130x80/FD020B/FFFFFF/?text=130%20x%2080"
+                                 width="130" height="80" alt="pic"/>
+                    <small>Picture title</small></a>
+            </div>
+            <div class="cell-2 item">
+                <a href="#"><img src="https://via.placeholder.com/130x80/FD020B/FFFFFF/?text=130%20x%2080"
+                                 width="130" height="80" alt="pic"/>
+                    <small>Picture title</small></a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <style>
     body {
-        margin-top: 60px !important;
+        margin-top: 80px !important;
     }
 
     .linenums li {
