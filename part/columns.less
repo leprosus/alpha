@@ -2,33 +2,30 @@
 @import "mixins";
 
 // Columns System
-.column {
-  .box-sizing;
-  float: left;
-  padding-left: @grid-gutter-width/2;
-
-  &:first-child {
-    padding-left: 0;
-    padding-right: @grid-gutter-width/2;
-  }
-}
-
 .column-2,
 .column-3,
 .column-4 {
-  .clearfix;
+  display: grid;
+
+  .column {
+    .box-sizing;
+    padding-left: @grid-gutter-width/2;
+
+    &:first-child {
+      padding-left: 0;
+      padding-right: @grid-gutter-width/2;
+    }
+  }
 }
 
-.column-4 .column,
-.column-3 .column .column,
-.column-2 .column {
-  width: 50%;
+.column-2 {
+  grid-template-columns: auto auto;
 }
 
-.column-3 > .column:first-child {
-  width: 67%;
+.column-3 {
+  grid-template-columns: auto auto auto;
 }
 
-.column-3 > .column {
-  width: 33%;
+.column-4 {
+  grid-template-columns: auto auto auto auto;
 }

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
+    <meta charset="ut8">
     <title>ALPHA CSS framework documentation</title>
     <link href="dist/alpha.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet">
@@ -106,8 +106,8 @@
 	&lt;/div&gt;&lt;!-- row --&gt;
 &lt;/div&gt;&lt;!-- grid --&gt;</pre>
         <h4>12-columns layout demo</h4>
-        <div class="f-demo">
-            <div class="row grid-demo">
+        <div class="demo">
+            <div class="row demo">
                 <div class="cell-1">
                     <code>cell-1</code>
                 </div>
@@ -145,7 +145,7 @@
                     <code>cell-1</code>
                 </div>
             </div>
-            <div class="row grid-demo">
+            <div class="row demo">
                 <div class="cell-2">
                     <code>cell-2 - 140px</code>
                 </div>
@@ -165,7 +165,7 @@
                     <code>cell-2</code>
                 </div>
             </div>
-            <div class="row grid-demo">
+            <div class="row demo">
                 <div class="cell-3">
                     <code>cell-3 - 220px</code>
                 </div>
@@ -179,7 +179,7 @@
                     <code>cell-3</code>
                 </div>
             </div>
-            <div class="row grid-demo">
+            <div class="row demo">
                 <div class="cell-4">
                     <code>cell-4 - 300px</code>
                 </div>
@@ -190,7 +190,7 @@
                     <code>cell-4</code>
                 </div>
             </div>
-            <div class="row grid-demo">
+            <div class="row demo">
                 <div class="cell-5">
                     <code>cell-5 - 380px</code>
                 </div>
@@ -198,7 +198,7 @@
                     <code>cell-7</code>
                 </div>
             </div>
-            <div class="row grid-demo">
+            <div class="row demo">
                 <div class="cell-6">
                     <code>cell-6 - 460px</code>
                 </div>
@@ -206,7 +206,7 @@
                     <code>cell-6</code>
                 </div>
             </div>
-            <div class="row grid-demo">
+            <div class="row demo">
                 <div class="cell-7">
                     <code>cell-7 - 540px</code>
                 </div>
@@ -214,7 +214,7 @@
                     <code>cell-5</code>
                 </div>
             </div>
-            <div class="row grid-demo">
+            <div class="row demo">
                 <div class="cell-8">
                     <code>cell-8 - 620px</code>
                 </div>
@@ -222,7 +222,7 @@
                     <code>cell-4</code>
                 </div>
             </div>
-            <div class="row grid-demo">
+            <div class="row demo">
                 <div class="cell-9">
                     <code>cell-9 - 700px</code>
                 </div>
@@ -230,7 +230,7 @@
                     <code>cell-3</code>
                 </div>
             </div>
-            <div class="row grid-demo">
+            <div class="row demo">
                 <div class="cell-10">
                     <code>cell-10 - 780px</code>
                 </div>
@@ -238,7 +238,7 @@
                     <code>cell-2</code>
                 </div>
             </div>
-            <div class="row grid-demo">
+            <div class="row demo">
                 <div class="cell-11">
                     <code>cell-11 - 860px</code>
                 </div>
@@ -246,7 +246,7 @@
                     <code>cell-1</code>
                 </div>
             </div>
-            <div class="row grid-demo">
+            <div class="row demo">
                 <div class="cell-12">
                     <code>cell-12 - 940px</code>
                 </div>
@@ -281,10 +281,10 @@
 	&lt;/div&gt;&lt;!-- row --&gt;
 &lt;/div&gt;&lt;!-- grid --&gt;</pre>
         <h4>Example of nested columns</h4>
-        <div class="f-demo">
-            <div class="row grid-demo">
+        <div class="demo">
+            <div class="row demo">
                 <div class="cell-6">
-                    <div class="row grid-demo">
+                    <div class="row demo">
                         <div class="cell-1">
                             <code>cell-1</code>
                         </div>
@@ -295,7 +295,7 @@
                             <code>cell-1</code>
                         </div>
                     </div>
-                    <div class="row grid-demo">
+                    <div class="row demo">
                         <div class="cell-2">
                             <code>cell-2</code>
                         </div>
@@ -308,12 +308,12 @@
                     </div>
                 </div>
                 <div class="cell-6">
-                    <div class="row grid-demo">
+                    <div class="row demo">
                         <div class="cell-6">
                             <code>cell-6</code>
                         </div>
                     </div>
-                    <div class="row grid-demo">
+                    <div class="row demo">
                         <div class="cell-3">
                             <code>cell-3</code>
                         </div>
@@ -437,7 +437,7 @@
 	&lt;li&gt;&lt;a href="#"&gt;Category&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href="#"&gt;Nested category&lt;/a&gt;&lt;/li&gt;
 	&lt;li class="cur"&gt;Product&lt;/li&gt;
-&lt;/ul&gt;&lt;!-- f-breadcrumb --&gt;</pre>
+&lt;/ul&gt;&lt;!-- breadcrumb --&gt;</pre>
         <h4>Bread crumbs example</h4>
         <ul class="breadcrumbs">
             <li><a href="#">Main</a></li>
@@ -848,6 +848,95 @@
         </div>
     </div>
 </section>
+<section id="columns" class="row">
+    <div class="cell-12">
+        <h2>Columns</h2>
+        <p>To build columns with with the same content width and fixed offsets between them is using base element <code>.column-x</code>
+            with nested <code>.column</code>. Where <code>x</code> can be: 1, 2, 3 or 4.</p>
+        <h4>2 columns</h4>
+        <p>To render 2 columns with 50%/50% width, use class <code>.column-2</code> with necessary nested 2 elements
+            with
+            class <code>.column</code>.</p>
+        <pre class="prettyprint linenums">&lt;div class="column-2"&gt;
+	&lt;div class="column"&gt;
+		...
+	&lt;/div&gt;&lt;!-- column --&gt;
+	&lt;div class="column"&gt;
+		...
+	&lt;/div&gt;&lt;!-- column --&gt;
+&lt;/div&gt;&lt;!-- column-2 --&gt;</pre>
+        <div class="demo">
+            <div class="column-2">
+                <div class="column">
+                    <p>This is first column with 50% width.</p>
+                </div>
+                <div class="column">
+                    <p>This is second column with 50% width.</p>
+                </div>
+            </div>
+        </div>
+        <h3>3 columns</h3>
+        <p>To render 3 columns with 33.3% width each you need class <code>.column-3</code> with nested elements with
+            class <code>.column</code>.</p>
+        <pre class="prettyprint linenums">&lt;div class="column-3"&gt;
+    &lt;div class="column"&gt;
+        ...
+    &lt;/div&gt;&lt;!-- column --&gt;
+    &lt;div class="column"&gt;
+        ...
+    &lt;/div&gt;&lt;!-- column --&gt;
+	&lt;div class="column"&gt;
+		...
+	&lt;/div&gt;&lt;!-- column --&gt;
+&lt;/div&gt;&lt;!-- column-3 --&gt;</pre>
+        <div class="demo">
+            <div class="column-3">
+                <div class="column">
+                    <p>This is first column with 33.3% width.</p>
+                </div>
+                <div class="column">
+                    <p>This is second column with 33.3% width.</p>
+                </div>
+                <div class="column">
+                    <p>This is third column with 33.3% width.</p>
+                </div>
+            </div>
+        </div>
+        <h3>4 columns</h3>
+        <p>To render 4 columns with 25% width each you need class <code>.column-3</code> with nested elements with
+            class <code>.column</code>.</p>
+        <pre class="prettyprint linenums">&lt;div class="column-4"&gt;
+    &lt;div class="column"&gt;
+        ...
+    &lt;/div&gt;&lt;!-- column --&gt;
+    &lt;div class="column"&gt;
+        ...
+    &lt;/div&gt;&lt;!-- column --&gt;
+    &lt;div class="column"&gt;
+        ...
+    &lt;/div&gt;&lt;!-- column --&gt;
+    &lt;div class="column"&gt;
+        ...
+    &lt;/div&gt;&lt;!-- column --&gt;
+&lt;/div&gt;&lt;!-- column-4 --&gt;</pre>
+        <div class="demo">
+            <div class="column-4">
+                <div class="column">
+                    <p>This is first 25% width column.</p>
+                </div>
+                <div class="column">
+                    <p>This is second 25% width column.</p>
+                </div>
+                <div class="column">
+                    <p>This is third 25% width column.</p>
+                </div>
+                <div class="column">
+                    <p>This is fourth 25% width column.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <style>
     body {
@@ -858,20 +947,58 @@
         list-style-type: decimal;
     }
 
-    .grid-demo > [class ^= "cell-"] {
+    .demo > [class ^= "cell-"] {
         text-align: center;
         background: #eee;
         line-height: 27px;
         border-radius: 3px;
     }
 
-    .grid-demo code {
+    .demo code {
         border: none;
         background: none;
     }
 
-    .grid-demo .grid-demo > [class ^= "cell-"] {
+    .demo .demo > [class ^= "cell-"] {
         background: #e2e2e2;
+    }
+
+    .demo .column {
+        background: #eee;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .demo .column p {
+        padding: 5px 10px;
+        margin-bottom: 0;
+    }
+
+    .demo .column:first-child:before,
+    .demo .column:last-child:after {
+        content: unset;
+    }
+
+    .demo .column:before {
+        left: 0;
+        top: 0;
+        width: 10px;
+        bottom: 0;
+        content: '';
+        background: #ccc;
+        position: absolute;
+        display: block;
+    }
+
+    .demo .column:after {
+        right: 0;
+        top: 0;
+        width: 10px;
+        bottom: 0;
+        content: '';
+        background: #ccc;
+        position: absolute;
+        display: block;
     }
 </style>
 <script>

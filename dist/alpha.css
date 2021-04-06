@@ -172,44 +172,31 @@ section {
 .cell-12 {
   width: 940px;
 }
-.column {
-  box-sizing: border-box;
-  float: left;
-  padding-left: 10px;
-}
-.column:first-child {
-  padding-left: 0;
-  padding-right: 10px;
-}
 .column-2,
 .column-3,
 .column-4 {
-  zoom: 1;
+  display: grid;
 }
-.column-2:before,
-.column-3:before,
-.column-4:before,
-.column-2:after,
-.column-3:after,
-.column-4:after {
-  display: table;
-  content: '';
+.column-2 .column,
+.column-3 .column,
+.column-4 .column {
+  box-sizing: border-box;
+  padding-left: 10px;
 }
-.column-2:after,
-.column-3:after,
-.column-4:after {
-  clear: both;
+.column-2 .column:first-child,
+.column-3 .column:first-child,
+.column-4 .column:first-child {
+  padding-left: 0;
+  padding-right: 10px;
 }
-.column-4 .column,
-.column-3 .column .column,
-.column-2 .column {
-  width: 50%;
+.column-2 {
+  grid-template-columns: auto auto;
 }
-.column-3 > .column:first-child {
-  width: 67%;
+.column-3 {
+  grid-template-columns: auto auto auto;
 }
-.column-3 > .column {
-  width: 33%;
+.column-4 {
+  grid-template-columns: auto auto auto auto;
 }
 body {
   font: normal 13px / 18px Arial, 'Helvetica Neue', Helvetica, sans-serif;
