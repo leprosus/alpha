@@ -959,7 +959,7 @@
                 <p>To create button use class <code>.button</code>:</p>
                 <pre class="prettyprint linenums">&lt;button class="button"&gt;Button&lt;/button&gt;
 &lt;span class="button"&gt;Span&lt;/span&gt;
-&lt;a href="#" class="button"&gt;Ссылка&lt;/a&gt;</pre>
+&lt;a href="#" class="button"&gt;Link&lt;/a&gt;</pre>
             </div>
             <div class="cell-7">
                 <p>The class you can use with the following tags: <code>&lt;button&gt;</code>, <code>&lt;span&gt;</code>,
@@ -1077,73 +1077,73 @@
             </div>
         </div>
     </div>
-    <h3>Сообщения</h3>
-    <p>Блок с классом <code>.message</code> предназначен для вывода сообщений.</p>
-    <p>Самый простой пример сообщения:</p>
+    <h3>Notices</h3>
+    <p>An element with the class <code>.notice</code> is for notice rendering.</p>
+    <p>The simplest example:</p>
     <div class="row">
         <div class="cell-7">
-<pre class="prettyprint linenums">&lt;div class="message"&gt;
+<pre class="prettyprint linenums">&lt;div class="notice"&gt;
 	&lt;span class="close"&gt;&lt;/span&gt;
-	&lt;strong&gt;Внимание&lt;/strong&gt;, текст простого сообщения
-&lt;/div&gt;&lt;!--message --&gt;</pre>
+	&lt;strong&gt;Important&lt;/strong&gt;: this is the simplest notice
+&lt;/div&gt;&lt;!--notice --&gt;</pre>
         </div>
         <div class="cell-5">
-            <div class="message">
+            <div class="notice">
                 <span class="close"></span>
-                <strong>Внимание</strong>, текст простого сообщения
+                <strong>Attantion:</strong>: the text of simple notice
             </div>
         </div>
     </div>
-    <p>Сообщение с заголовком, текстом and кнопками, используется дополнительный элемент
-        <code>.message-actions</code>:</p>
+    <p>A notice with a title, a text and buttons. For this you need to use additional element with the class <code>.actions</code>:
+    </p>
     <div class="row">
         <div class="cell-7">
-<pre class="prettyprint linenums">&lt;div class="message"&gt;
+<pre class="prettyprint linenums">&lt;div class="notice"&gt;
 	&lt;span class="close"&gt;&lt;/span&gt;
-	&lt;h5&gt;Заголовок сообщения&lt;/h5&gt;
-	&lt;p&gt;Пример сообщения с заголовком and кнопками&lt;/p&gt;
-	&lt;p class="message-actions"&gt;
-		&lt;a class="button" href="#"&gt;Да&lt;/a&gt;
-		&lt;a class="button" href="#"&gt;Отмена&lt;/a&gt;
+	&lt;h5&gt;The notice title&lt;/h5&gt;
+	&lt;p&gt;The example of a notice with a title and buttons&lt;/p&gt;
+	&lt;p class="actions"&gt;
+		&lt;a class="button" href="#"&gt;Apply&lt;/a&gt;
+		&lt;a class="button" href="#"&gt;Cancel&lt;/a&gt;
 	&lt;/p&gt;
-&lt;/div&gt;&lt;!--message --&gt;</pre>
+&lt;/div&gt;&lt;!--notice --&gt;</pre>
         </div>
         <div class="cell-5">
-            <div class="message">
+            <div class="notice">
                 <span class="close"></span>
-                <h5>Заголовок сообщения</h5>
-                <p>Пример сообщения с заголовком and кнопками</p>
-                <p class="message-actions"><a class="button" href="#">Да</a> <a class="button" href="#">Отмена</a>
+                <h5>Title of the notice</h5>
+                <p>Example of a notice with the title and buttons</p>
+                <p class="actions"><a class="button" href="#">Apply</a> <a class="button" href="#">Cancel</a>
                 </p>
             </div>
         </div>
     </div>
-    <p>Помимо простого сообщения, можно использовать класс <code>.message-error</code> для сообщений об ошибках:
+    <p>Beyond a simple message you can use the class <code>.error</code> for a notice with a error:
     </p>
     <div class="row">
         <div class="cell-7">
-<pre class="prettyprint linenums">&lt;div class="message message-error"&gt;
+<pre class="prettyprint linenums">&lt;div class="notice error"&gt;
 	...
-&lt;/div&gt;&lt;!--message --&gt;</pre>
+&lt;/div&gt;&lt;!--notice --&gt;</pre>
         </div>
         <div class="cell-5">
-            <div class="message message-error">
+            <div class="notice error">
                 <span class="close"></span>
-                <strong>Доступ запрещён,</strong> сообщения об ошибке
+                <strong>Access is deny</strong> (a notice error)
             </div>
         </div>
     </div>
-    <p>Для удачных сообщений существует класс <code>.message-success</code>:</p>
+    <p>For a notice with success you need to use the class <code>.success</code>:</p>
     <div class="row">
         <div class="cell-7">
-<pre class="prettyprint linenums">&lt;div class="message message-success"&gt;
+<pre class="prettyprint linenums">&lt;div class="notice success"&gt;
 	...
-&lt;/div&gt;&lt;!--message --&gt;</pre>
+&lt;/div&gt;&lt;!--notice --&gt;</pre>
         </div>
         <div class="cell-5">
-            <div class="message message-success">
+            <div class="notice success">
                 <span class="close"></span>
-                <strong>Поздравляем</strong>, всё прошло очень хорошо :)
+                <strong>Congratulation</strong> everything were well :)
             </div>
         </div>
     </div>
