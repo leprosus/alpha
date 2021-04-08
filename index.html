@@ -937,7 +937,218 @@
         </div>
     </div>
 </section>
-
+<section id="forms" class="row">
+    <div class="cell-12">
+        <h2>Forms</h2>
+        <h3>Text input boxes</h3>
+        <div class="row">
+            <div class="cell-5">
+                <p>To create text input box need the following:</p>
+                <pre class="prettyprint linenums">&lt;input type="text"&gt;
+&lt;input type="password"&gt;</pre>
+            </div>
+            <div class="cell-7">
+                <p>As result you get the following boxes:</p>
+                <p><input type="text"></p>
+                <p><input type="password"></p>
+            </div>
+        </div>
+        <h3>Buttons</h3>
+        <div class="row">
+            <div class="cell-5">
+                <p>To create button use class <code>.button</code>:</p>
+                <pre class="prettyprint linenums">&lt;button class="button"&gt;Button&lt;/button&gt;
+&lt;span class="button"&gt;Span&lt;/span&gt;
+&lt;a href="#" class="button"&gt;Ссылка&lt;/a&gt;</pre>
+            </div>
+            <div class="cell-7">
+                <p>The class you can use with the following tags: <code>&lt;button&gt;</code>, <code>&lt;span&gt;</code>,
+                    <code>&lt;a&gt;</code>:
+                </p>
+                <p>
+                    <button class="button">Button</button>
+                    <span class="button">Span</span>
+                    <a href="#" class="button">Link</a></p>
+            </div>
+        </div>
+        <p>Color coding of buttons using classes: <code>.default</code>, <code>.success</code>, <code>.warning</code>
+        </p>
+        <div class="row">
+            <div class="cell-7">
+                <pre class="prettyprint">&lt;button class="button default"&gt;Main action&lt;/button&gt;</pre>
+            </div>
+            <div class="cell-5">
+                <p>
+                    <button class="button default">Main action</button>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell-7">
+                <pre class="prettyprint">&lt;button class="button success"&gt;Positive action&lt;/button&gt;</pre>
+            </div>
+            <div class="cell-5">
+                <p>
+                    <button class="button success">Positive action</button>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell-7">
+                <pre class="prettyprint">&lt;button class="button warning"&gt;Negative action&lt;/button&gt;</pre>
+            </div>
+            <div class="cell-5">
+                <p>
+                    <button class="button warning">Negative action</button>
+                </p>
+            </div>
+        </div>
+        <p>You can create grouped buttons with parent class <code>.buttons</code>:</p>
+        <div class="row">
+            <div class="cell-5">
+<pre class="prettyprint linenums">&lt;p class="buttons"&gt;
+	&lt;span class="button"&gt;1&lt;/span&gt;
+	&lt;span class="button"&gt;2&lt;/span&gt;
+	&lt;span class="button"&gt;3&lt;/span&gt;
+	...
+&lt;/p&gt;&lt;!-- buttons --&gt;</pre>
+            </div>
+            <div class="cell-7">
+                <p class="buttons"><span class="button">1</span><span class="button">2</span><span
+                        class="button">3</span><span class="button">4</span><span class="button">5</span></p>
+            </div>
+        </div>
+        <h3>Radio inputs, check boxes and labels</h3>
+        <p>The simplest construction contains minimum elements set like <code>&lt;label&gt;</code> and <code>&lt;input&gt;</code>.
+        </p>
+        <p>Radio input must be included into label with class <code>.radio</code> and check boxes must be included into
+            label with class <code>.check</code>.</p>
+        <div class="row">
+            <div class="cell-7">
+<pre class="prettyprint linenums">&lt;label class="radio"&gt;&lt;input type="radio"&gt; radio input&lt;/label&gt;
+&lt;label class="check"&gt;&lt;input type="checkbox"&gt; check box&lt;/label&gt;</pre>
+            </div>
+            <div class="cell-5">
+                <p><label class="radio"><input type="radio"> radio input</label><br/>
+                    <label class="check"><input type="checkbox"> check box</label></p>
+            </div>
+        </div>
+        <h3>Select</h3>
+        <p>In the case you don't need any class and you need only <code>&lt;select&gt;</code> and
+            <code>&lt;option&gt;</code>.</p>
+        <div class="row">
+            <div class="cell-6">
+<pre class="prettyprint linenums">&lt;select&gt;
+	&lt;option&gt;First option&lt;/option&gt;
+	&lt;option&gt;Second option&lt;/option&gt;
+	&lt;option&gt;Third option&lt;/option&gt;
+&lt;/select&gt;</pre>
+            </div>
+            <div class="cell-6">
+                <select>
+                    <option>First option</option>
+                    <option>Second option</option>
+                    <option>Third option</option>
+                </select>
+            </div>
+        </div>
+        <h3>Input boxes width</h3>
+        <p>To set width you need to use class <code>.cell-x</code>.</p>
+        <div class="row">
+            <div class="cell-6">
+                <p>Where <code>x</code> can be between 1 and 12.</p>
+                <p>Width can be set for buttons, select and input boxes:</p>
+                <pre class="prettyprint linenums">&lt;button class="button cell-1"&gt;.cell-1&lt;/button&gt;
+&lt;input type="text" class="cell-2" value=".cell-2"&gt;
+&lt;input type="text" class="cell-3" value=".cell-3"&gt;
+&lt;select class="cell-4"&gt;&lt;option&gt;.cell-4&lt;/option&gt;&lt;/select&gt;
+&lt;textarea class="cell-5"&gt;.cell-5&lt;/textarea&gt;</pre>
+            </div>
+            <div class="cell-6">
+                <p>
+                    <button class="button cell-1">.cell-1</button>
+                </p>
+                <p><input type="text" class="cell-2" value=".cell-2"></p>
+                <p><input type="text" class="cell-3" value=".cell-3"></p>
+                <p><select class="cell-4">
+                    <option>.cell-4</option>
+                </select></p>
+                <p><textarea class="cell-5">.cell-5</textarea></p>
+            </div>
+        </div>
+    </div>
+    <h3>Сообщения</h3>
+    <p>Блок с классом <code>.message</code> предназначен для вывода сообщений.</p>
+    <p>Самый простой пример сообщения:</p>
+    <div class="row">
+        <div class="cell-7">
+<pre class="prettyprint linenums">&lt;div class="message"&gt;
+	&lt;span class="close"&gt;&lt;/span&gt;
+	&lt;strong&gt;Внимание&lt;/strong&gt;, текст простого сообщения
+&lt;/div&gt;&lt;!--message --&gt;</pre>
+        </div>
+        <div class="cell-5">
+            <div class="message">
+                <span class="close"></span>
+                <strong>Внимание</strong>, текст простого сообщения
+            </div>
+        </div>
+    </div>
+    <p>Сообщение с заголовком, текстом and кнопками, используется дополнительный элемент
+        <code>.message-actions</code>:</p>
+    <div class="row">
+        <div class="cell-7">
+<pre class="prettyprint linenums">&lt;div class="message"&gt;
+	&lt;span class="close"&gt;&lt;/span&gt;
+	&lt;h5&gt;Заголовок сообщения&lt;/h5&gt;
+	&lt;p&gt;Пример сообщения с заголовком and кнопками&lt;/p&gt;
+	&lt;p class="message-actions"&gt;
+		&lt;a class="button" href="#"&gt;Да&lt;/a&gt;
+		&lt;a class="button" href="#"&gt;Отмена&lt;/a&gt;
+	&lt;/p&gt;
+&lt;/div&gt;&lt;!--message --&gt;</pre>
+        </div>
+        <div class="cell-5">
+            <div class="message">
+                <span class="close"></span>
+                <h5>Заголовок сообщения</h5>
+                <p>Пример сообщения с заголовком and кнопками</p>
+                <p class="message-actions"><a class="button" href="#">Да</a> <a class="button" href="#">Отмена</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <p>Помимо простого сообщения, можно использовать класс <code>.message-error</code> для сообщений об ошибках:
+    </p>
+    <div class="row">
+        <div class="cell-7">
+<pre class="prettyprint linenums">&lt;div class="message message-error"&gt;
+	...
+&lt;/div&gt;&lt;!--message --&gt;</pre>
+        </div>
+        <div class="cell-5">
+            <div class="message message-error">
+                <span class="close"></span>
+                <strong>Доступ запрещён,</strong> сообщения об ошибке
+            </div>
+        </div>
+    </div>
+    <p>Для удачных сообщений существует класс <code>.message-success</code>:</p>
+    <div class="row">
+        <div class="cell-7">
+<pre class="prettyprint linenums">&lt;div class="message message-success"&gt;
+	...
+&lt;/div&gt;&lt;!--message --&gt;</pre>
+        </div>
+        <div class="cell-5">
+            <div class="message message-success">
+                <span class="close"></span>
+                <strong>Поздравляем</strong>, всё прошло очень хорошо :)
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
 <style>
     body {
         margin-top: 80px !important;
@@ -945,6 +1156,15 @@
 
     .linenums li {
         list-style-type: decimal;
+    }
+
+    pre.prettyprint {
+        border: none;
+    }
+
+    pre li[class^='L'] {
+        background: unset !important;
+        margin-left: 10px;
     }
 
     .demo > [class ^= "cell-"] {

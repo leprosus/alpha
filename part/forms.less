@@ -15,72 +15,6 @@ form {
     margin: 0;
     padding: 0 0 (@bottom-spacing * 2) 0;
   }
-
-  .row {
-    & + .row {
-      margin: @bottom-spacing 0 0 0;
-    }
-
-    > label,
-    .label {
-      float: left;
-      padding: @form-text-vertical-spacing 0 0 0;
-      text-align: right;
-      width: @form-label-width;
-    }
-
-    .input {
-      margin: 0 0 0 (@form-label-width + @grid-gutter-width);
-
-      + .input {
-        margin-top: (@bottom-spacing / 2)
-      }
-
-      .help {
-        color: @form-help-color;
-        font-size: @form-help-text-size;
-        margin: 0;
-        padding-top: 3px;
-      }
-
-      .comment,
-      .inline {
-        margin-left: 5px;
-      }
-
-      .comment {
-        display: inline-block;
-        padding: @form-text-vertical-spacing 0 0 0;
-        vertical-align: top;
-      }
-    }
-  }
-
-  .actions {
-    .border-radius(0 0 @border-radius @border-radius);
-    background: @form-action-background;
-    margin: 0;
-    padding: @bottom-spacing @bottom-spacing @bottom-spacing (@form-label-width + @grid-gutter-width);
-  }
-
-  &.horizontal {
-    .row > label,
-    .label {
-      display: block;
-      float: none;
-      padding: 0 0 @form-text-vertical-spacing;
-      text-align: left;
-      width: auto;
-    }
-
-    .input {
-      margin: 0;
-    }
-
-    .actions {
-      padding: @bottom-spacing;
-    }
-  }
 }
 
 // Inputs & buttons
@@ -171,15 +105,6 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
-.lt-ie8 {
-  select,
-  textarea,
-  input[type="text"],
-  input[type="password"] {
-    height: auto;
-  }
-}
-
 // Buttons group
 .buttons {
   .button {
@@ -248,6 +173,7 @@ input::-moz-focus-inner {
 .radio input,
 .check input {
   margin: 2px;
+  vertical-align: middle;
 }
 
 // Focus & Active state
