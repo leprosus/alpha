@@ -2,10 +2,9 @@
 
 // Notice block
 .notice {
-  background: #feffe3;
-  border-radius: 3px;
-  border: 1px solid #eff3d5;
-  color: #5c5d46;
+  background: @gray-lighter;
+  border-radius: @border-radius;
+  color: lighten(@text, 15);
   margin: 0 0 @bottom-spacing 0;
   padding: 8px 27px 8px 12px;
   position: relative;
@@ -38,15 +37,11 @@
   }
 
   &.error {
-    background: #ffebe1;
-    border-color: #ffddd3;
-    color: #5c4c45;
+    background: lighten(@red, 40);
   }
 
   &.success {
-    background: #e9f2c9;
-    border-color: #dbe4bb;
-    color: #4b5331;
+    background: lighten(desaturate(@green, 50), 55);
   }
 
   // Close element

@@ -40,7 +40,7 @@
     margin: 0 @bottom-spacing/2 -1px 0;
 
     > a {
-      .border-radius(@border-radius @border-radius 0 0);
+      border-radius: @border-radius @border-radius 0 0;
       border-bottom: 1px solid transparent;
       padding: 1px 10px 0;
 
@@ -98,7 +98,7 @@
   > .active > a,
   > .active > a:hover,
   > li > a {
-    .border-radius(0);
+    border-radius: 0;
     border: 1px solid @nav-border-color;
     padding: 0 10px;
   }
@@ -110,26 +110,26 @@
   }
 
   > li:first-child > a {
-    .border-radius(@border-radius @border-radius 0 0);
+    border-radius: @border-radius @border-radius 0 0;
   }
 
   > li:last-child > a {
-    .border-radius(0 0 @border-radius @border-radius);
+    border-radius: 0 0 @border-radius @border-radius;
   }
 }
 
 // Navigation bar
 .nav-bar {
-  #gradient > .vertical(lighten(@nav-bar-background, 5%), darken(@nav-bar-background, 10%));
-  .border-radius;
-  .box-shadow;
+  background-color: @nav-bar-background;
+  border-radius: @border-radius;
+  box-shadow: 0 1px 3px fadeout(@black, 75);
   border: 1px solid darken(@nav-bar-background, 5%);
   color: @nav-bar-text-color;
   position: relative;
   z-index: @nav-z-index;
 
   .body {
-    .box-sizing;
+    box-sizing: border-box;
     .clearfix;
     .grid-row(12);
     height: @nav-bar-height;
@@ -184,7 +184,7 @@
 
 // Top fixed navigation bar
 .nav-bar.fixed {
-  .border-radius(0);
+  border-radius: 0;
   left: 0;
   position: fixed;
   right: 0;

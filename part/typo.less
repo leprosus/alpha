@@ -41,7 +41,7 @@ h5:first-child {
 }
 
 abbr {
-  border-bottom: 1px dotted @gray-lighter;
+  border-bottom: 1px dotted @gray-light;
 }
 
 blockquote {
@@ -58,7 +58,7 @@ blockquote {
 
   &:before,
   &:after {
-    color: @gray-lighter;
+    color: @gray-light;
     font-size: 3em;
     position: absolute;
   }
@@ -103,14 +103,14 @@ q:after {
 pre,
 code,
 samp {
-  .border-radius;
+  border-radius: @border-radius;
   background: @source-background;
   border: 1px solid darken(@source-background, 3);
 }
 
 samp {
-  background: @source-background-inversed;
-  border-color: lighten(@source-background-inversed, 3);
+  background: @source-background-inverted;
+  border-color: lighten(@source-background-inverted, 3);
   color: @source-background;
 }
 
@@ -196,7 +196,7 @@ small {
 
 hr,
 .hr {
-  background: @gray-light;
+  background: @gray-lighter;
   border: 0;
   height: 2px;
 }

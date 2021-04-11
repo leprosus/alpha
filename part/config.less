@@ -1,30 +1,31 @@
-// Base
-@background: #fff;
-@text: #444;
-
-// Links
-@link: #268bd2;
-@link-hover: darken(@link, 10);
-@link-visited: darken(@link, 20);
-
 // Colors
 @orange: #cb4b16;
-@yellow-light: #fdf6e3;
-@red: #dc322f;
-@green: #859900;
-@blue: #268bd2;
+@yellow-light: lighten(#F4B400, 50);
+@red: #db4437;
+@green: #0f9d58;
+@blue: #4285f4;
 
 @white: #fff;
-@gray-light: #eee;
-@gray-lighter: #ccc;
+@gray-lighter: #eee;
+@gray-light: #ccc;
 @gray: #888;
 @gray-darker: #666;
 @gray-dark: #333;
 @black: #000;
 
+// Base
+@background: @white;
+@text: @gray-dark;
+
+// Links
+@link: @blue;
+@link-hover: darken(@link, 15);
+@link-visited: darken(@link, 30);
+
+//Typography
 @header-color: @gray-dark;
 @source-background: @yellow-light;
-@source-background-inversed: #073642;
+@source-background-inverted: #073642;
 
 // Font Stacks
 @font-sans-serif: Arial, 'Helvetica Neue', Helvetica, sans-serif;
@@ -63,18 +64,18 @@
 @site-width: (@grid-columns * @grid-column-width) + (@grid-gutter-width * (@grid-columns - 1));
 
 // Navigation
-@nav-z-index: 2010;
+@nav-z-index: 2000;
 @nav-height: 28px;
 @nav-background: @white;
 @nav-border-color: darken(@white, 15%);
 @nav-hover-color: @black;
-@nav-hover-border-color: @gray-light;
-@nav-hover-background: @gray-light;
+@nav-hover-border-color: @gray-lighter;
+@nav-hover-background: @gray-lighter;
 @nav-active-color: @black;
-@nav-active-border-color: @gray-lighter;
+@nav-active-border-color: @gray-light;
 @nav-active-background: @white;
 @nav-bar-height: 36px;
-@nav-bar-text-color: @gray-lighter;
+@nav-bar-text-color: @gray-light;
 @nav-bar-text-color-shadow: @black;
 @nav-bar-text-color-active: @white;
 @nav-bar-text-color-shadow-active: @black;
@@ -82,25 +83,15 @@
 @nav-bar-background: @gray-dark;
 
 // Tables
-@table-header-background: lighten(@gray-light, 2%);
+@table-header-background: lighten(@gray-lighter, 2%);
 @table-hover-background: @yellow-light;
-@table-border-color: @gray-light;
+@table-border-color: @gray-lighter;
 
 // Forms
-@form-label-width: 200px;
-@form-help-text-size: 12px;
-@form-help-color: @gray;
-@form-text-vertical-spacing: 5px;
-@form-action-background: lighten(@gray-light, 2%);
-@form-input-border-color: darken(@gray-lighter, 5%) @gray-lighter lighten(@gray-lighter, 5%);
-@form-input-vertical-spacing: 3px;
+@input-vertical-spacing: 3px;
 
 // Buttons
-@button-background-start: @white;
-@button-background-end: lighten(@gray-lighter, 5%);
-@button-info-background-start: lighten(@blue, 20%);
-@button-info-background-end: @blue;
-@button-success-background-start: lighten(@green, 10%);
-@button-success-background-end: @green;
-@button-warning-background-start: lighten(@red, 20%);
-@button-warning-background-end: @red;
+@button-general: @white;
+@button-info: @blue;
+@button-success: @green;
+@button-warning: @red;
